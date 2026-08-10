@@ -7,16 +7,18 @@ void sortColors(int* nums, int numsSize);
 int strStr(char* haystack, char* needle);
 
 
-void main(){
+int main(){
     
     int numsSize, target, con;
+    while(0==0){
     //int nums[numsSize];
     printf("\nChoose any option from below:\n");
     printf("\n1: For sorting the number array.\n");
     printf("2: For geting index of Target insertion in already sorted number array.\n");
-    printf("3: For sort & geting index for Target insertion:\n");
+    printf("3: For sort & geting index for Target insertion.\n");
     printf("4: For geting the length of string :\n");
-    printf("5: For find the Index of the First Occurrence in a String\n");
+    printf("5: For find the Index of the First Occurrence in a String.\n");
+    printf("0: To end the program.\n");
     scanf("%d",&con);
 
     switch (con) {
@@ -79,7 +81,7 @@ void main(){
             scanf("%d",&target);
 
             int index = searchInsert(nums, numsSize, target);
-            printf("The index of insertion of target value:-> %d",index);
+            printf("The index of insertion of target value:-> %d\n",index);
             break;
         }
         case 4:{
@@ -105,18 +107,21 @@ void main(){
     //printf("%d",len);
             int s_index = strStr(haystack, needle);
             if(s_index!=-1){
-            printf("String is present in the main string on index:-> %d",s_index);
+            printf("String is present in the main string on index:-> %d\n",s_index);
             }
             else{
-                printf("String is not present in the main string.");
+                printf("String is not present in the main string.\n");
 
             }
             break;
         }
+        case 0:{
+            return 0;
+        }
         default:{
             printf("Enter right choice:\n");
         }
-    }
+    }}
             
         
 
