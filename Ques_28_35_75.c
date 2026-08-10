@@ -4,8 +4,11 @@
 
 int searchInsert(int* nums, int numsSize, int target);
 void sortColors(int* nums, int numsSize);
+int strStr(char* haystack, char* needle);
+
 
 void main(){
+    
     int numsSize, target;
     printf("Enter size of number array:\n");
     scanf("%d",&numsSize);
@@ -28,6 +31,23 @@ void main(){
 
     int index = searchInsert(nums, numsSize, target);
     printf("The index of insertion of target value:-> %d",index);
+
+
+    char haystack[100], needle[100];
+    printf("Enter the Main string :\n");
+    scanf("%s",&haystack);
+    
+    printf("Enter the string to be find:\n");
+    scanf("%s",needle);
+    //int len = strlen(needle);--just to check strlen() function
+    //printf("%d",len);
+    int s_index = strStr(haystack, needle);
+    if(s_index!=-1){
+        printf("String is present in the main string on index:-> %d",s_index);
+    }
+    else{
+        printf("String is not present in the main string.");
+    }
 
 
 }
