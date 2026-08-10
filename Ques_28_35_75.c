@@ -7,18 +7,27 @@ void sortColors(int* nums, int numsSize);
 
 void main(){
     int numsSize, target;
-    printf("enter size of number array:\n");
+    printf("Enter size of number array:\n");
     scanf("%d",&numsSize);
+
     int nums[numsSize];
+
+    printf("Enter the number array:\n");
+
     for(int i=0;i<numsSize;i++){
-        scanf("%d",nums[i]);
+        scanf("%d",&nums[i]);
     }
+
     sortColors(nums, numsSize);
-    printf("enter the target value:\n");
+
+    for(int i=0;i<numsSize;i++){
+        printf("%d ",nums[i]);
+    }
+    printf("\nEnter the target value:\n");
     scanf("%d",&target);
 
     int index = searchInsert(nums, numsSize, target);
-    printf("The index of insertion of target value:->%d",index);
+    printf("The index of insertion of target value:-> %d",index);
 
 
 }
