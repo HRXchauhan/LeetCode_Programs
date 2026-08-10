@@ -9,8 +9,123 @@ int strStr(char* haystack, char* needle);
 
 void main(){
     
-    int numsSize, target;
-    printf("Enter size of number array:\n");
+    int numsSize, target, con;
+    //int nums[numsSize];
+    printf("\nChoose any option from below:\n");
+    printf("\n1: For sorting the number array.\n");
+    printf("2: For geting index of Target insertion in already sorted number array.\n");
+    printf("3: For sort & geting index for Target insertion:\n");
+    printf("4: For geting the length of string :\n");
+    printf("5: For find the Index of the First Occurrence in a String\n");
+    scanf("%d",&con);
+
+    switch (con) {
+
+        case 1:{
+
+            printf("Enter size of number array:\n");
+            scanf("%d",&numsSize);
+
+            int nums[numsSize];
+
+            printf("Enter the number array:\n");
+
+            for(int i=0;i<numsSize;i++){
+                scanf("%d",&nums[i]);
+            }
+
+            sortColors(nums, numsSize);
+
+            for(int i=0;i<numsSize;i++){
+                printf("%d ",nums[i]);
+            }
+            break;
+        }
+        case 2:{
+            printf("Enter size of number array:\n");
+            scanf("%d",&numsSize);
+
+            int nums[numsSize];
+
+            printf("Enter the number array:\n");
+
+            for(int i=0;i<numsSize;i++){
+                scanf("%d",&nums[i]);
+            }
+
+            
+            printf("\nEnter the target value:\n");
+            scanf("%d",&target);
+
+            int index = searchInsert(nums, numsSize, target);
+            printf("The index of insertion of target value:-> %d",index);
+            break;
+        }
+
+        case 3:{
+            printf("Enter size of number array:\n");
+            scanf("%d",&numsSize);
+
+            int nums[numsSize];
+
+            printf("Enter the number array:\n");
+
+            for(int i=0;i<numsSize;i++){
+                scanf("%d",&nums[i]);
+            }
+
+            sortColors(nums, numsSize);
+            printf("\nEnter the target value:\n");
+            scanf("%d",&target);
+
+            int index = searchInsert(nums, numsSize, target);
+            printf("The index of insertion of target value:-> %d",index);
+            break;
+        }
+        case 4:{
+            char haystack[100], needle[100];
+            printf("Enter the Main string :\n");
+            scanf("%s",&haystack);
+    
+            //printf("Enter the string to be find:\n");
+            //scanf("%s",needle);
+            int len = strlen(haystack);//--just to check strlen() function
+            printf("%d\n",len);
+            break;
+
+        }
+        case 5:{
+            char haystack[100], needle[100];
+            printf("Enter the Main string :\n");
+            scanf("%s",&haystack);
+    
+            printf("Enter the string to be find:\n");
+            scanf("%s",needle);
+    //int len = strlen(needle);--just to check strlen() function
+    //printf("%d",len);
+            int s_index = strStr(haystack, needle);
+            if(s_index!=-1){
+            printf("String is present in the main string on index:-> %d",s_index);
+            }
+            else{
+                printf("String is not present in the main string.");
+
+            }
+            break;
+        }
+        default:{
+            printf("Enter right choice:\n");
+        }
+    }
+            
+        
+
+
+            
+    
+
+
+    /*printf("Enter size of number array:\n");
     scanf("%d",&numsSize);
 
     int nums[numsSize];
@@ -30,10 +145,10 @@ void main(){
     scanf("%d",&target);
 
     int index = searchInsert(nums, numsSize, target);
-    printf("The index of insertion of target value:-> %d",index);
+    printf("The index of insertion of target value:-> %d",index);*/
 
 
-    char haystack[100], needle[100];
+    /*char haystack[100], needle[100];
     printf("Enter the Main string :\n");
     scanf("%s",&haystack);
     
@@ -47,12 +162,12 @@ void main(){
     }
     else{
         printf("String is not present in the main string.");
-    }
+    }*/
 
 
 }
 
-int strStr(char* haystack, char* needle) {
+int strStr(char* haystack, char* needle){
     int len = strlen(needle);
     int count =0;
     int lens = strlen(haystack);
