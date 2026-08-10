@@ -1,4 +1,27 @@
 #include <stdio.h>
+#include <string.h>
+
+
+int searchInsert(int* nums, int numsSize, int target);
+void sortColors(int* nums, int numsSize);
+
+void main(){
+    int numsSize, target;
+    printf("enter size of number array:\n");
+    scanf("%d",&numsSize);
+    int nums[numsSize];
+    for(int i=0;i<numsSize;i++){
+        scanf("%d",nums[i]);
+    }
+    sortColors(nums, numsSize);
+    printf("enter the target value:\n");
+    scanf("%d",&target);
+
+    int index = searchInsert(nums, numsSize, target);
+    printf("The index of insertion of target value:->%d",index);
+
+
+}
 
 int strStr(char* haystack, char* needle) {
     int len = strlen(needle);
