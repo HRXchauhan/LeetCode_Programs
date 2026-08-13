@@ -25,7 +25,7 @@ int lengthOfLastWord(char* s) {
             count=0;
         }
         if(s[i]!=' '){
-             while(s[i]!=' '&&s[i]!='\n')}
+             while(s[i]!=' '&&s[i]!='\n'){
                 if(s[i]==' '){
                 count=0;
                 }
