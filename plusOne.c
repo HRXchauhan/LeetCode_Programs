@@ -1,3 +1,20 @@
+#include <stdio.h>
+
+int* plusOne(int* digits, int digitsSize, int* returnSize);
+
+int main(){ 
+    int digitsSize, *returnSize;
+    printf("Enter the size of the array");
+    scanf("%d",&digitsSize);
+
+    int digits[digitsSize];
+    printf("Enter the number array:");
+    for(int j=0;j<digitsSize;j++){
+        scanf("%d",&digits[j]);
+    }
+    int arr[]= plusOne(digits, digitsSize, returnSize);
+    
+}
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
