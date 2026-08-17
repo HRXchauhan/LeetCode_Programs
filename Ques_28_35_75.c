@@ -21,7 +21,8 @@ int main(){
     printf("0: To end the program.\n");
     scanf("%d",&con);
 
-    switch (con) {
+    switch (con) 
+    {
 
         case 1:{
 
@@ -121,7 +122,8 @@ int main(){
         default:{
             printf("Enter right choice:\n");
         }
-    }}
+    }
+}
             
         
 
@@ -173,9 +175,11 @@ int main(){
 }
 
 int strStr(char* haystack, char* needle){
+
     int len = strlen(needle);
     int count =0;
     int lens = strlen(haystack);
+
     for(int i=0;i<lens;i++){
         count=0;
         for(int j=0,n=i;needle[j]!='\0'&&haystack[n]!='\0';n++,j++){
@@ -194,6 +198,7 @@ int strStr(char* haystack, char* needle){
 }
 
 int searchInsert(int* nums, int numsSize, int target) {
+
     for(int i=0;i<numsSize;i++){
         if(nums[i]>=target){
             return i;
@@ -208,16 +213,19 @@ void sortColors(int* nums, int numsSize) {
     time = numsSize;
 
     for(int j=numsSize;j>0;j--){
-        for(int i=0;i<time-1;i++){
-        if(nums[i]>nums[i+1]){
-            temp = nums[i];
-            nums[i]=nums[i+1];
-            nums[i+1]=temp;
+        for(int i=0;i<time-1;i++)
+        {
+
+            if(nums[i]>nums[i+1])
+            {
+                temp = nums[i];
+                nums[i]=nums[i+1];
+                nums[i+1]=temp;
             
-        }
+            }
         
 
-    }
+        }
     }
 
     

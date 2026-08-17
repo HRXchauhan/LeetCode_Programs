@@ -22,7 +22,7 @@ void main(){
 }
 int removeDuplicates(int* nums, int numsSize) {
     int k=0;
-    for(int j=0;j<numsSize;j++){
+    /*for(int j=0;j<numsSize;j++){
         for(int n=j+1;n<numsSize;n++){
             if(nums[j]==nums[n]){
                 for(int a=n;a<numsSize-1;a++){
@@ -37,12 +37,16 @@ int removeDuplicates(int* nums, int numsSize) {
                  
         }
 
-    }
+    }*/
     
     /*printf("%d\n",k);
 
     for(int b=0;b<numsSize;b++){
         printf("%d",nums[b]);
+    }*/
+
+    /*for(int j=0;j<numsSize;j++){
+        while(nums[j])
     }*/
     return numsSize;
     
