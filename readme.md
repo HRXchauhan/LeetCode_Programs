@@ -1,0 +1,1 @@
+plusOne is very complicated for right now i will do it later  it is very importent for malloc()this is the first code i write with help of malloc but i didn't make it so i did with the help of chatgpt;
