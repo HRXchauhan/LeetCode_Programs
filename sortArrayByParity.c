@@ -1,5 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
+    
+    int temp=0;
+    
+    int i=0, j=numsSize-1;
+
+    *returnSize=numsSize;
+        
+    while(j>i){
+        if(nums[i]%2==0){
+            i++;
+        }
+
+        if(nums[j]%2!=0){
+            j--;
+        }
+        if(nums[i]%2!=0 && nums[j]%2==0 &&j>i ){
+            temp= nums[i];
+            nums[i]=nums[j];
+            nums[j]=temp;
+            temp=0;
+            i++;
+            j--;
+        }
+    }
+    return nums;
+    
+}*/
+
+
 int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
     int *arr;
     int temp=0;
@@ -20,28 +50,8 @@ int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
 
     }
     return arr;
-        
-
-    /*while(j>i){
-        if(nums[i]%2==0){
-            i++;
-        }
-
-        if(nums[j]%2!=0){
-            j--;
-        }
-        if(nums[i]%2!=0 && nums[j]%2==0 &&j>i ){
-            temp= nums[i];
-            nums[i]=nums[j];
-            nums[j]=temp;
-            temp=0;
-            i++;
-            j--;
-        }
-    }
-    return nums;*/
-    
 }
+
 
 int main(){
     int numsSize,size;
