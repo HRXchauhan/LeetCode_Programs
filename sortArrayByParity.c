@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
     //int *arr;
     int temp=0;
@@ -36,4 +38,29 @@ int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
     }
     return nums;
     
+}
+
+int main(){
+    int numsSize,size;
+    printf("Enter the size of the nums array\n");
+    scanf("%d",&numsSize);
+
+    int nums[numsSize];
+
+    printf("Enter the nums array\n");
+
+    for(int i=0;i<numsSize;i++){
+        scanf("%d",&nums[i]);
+    }
+
+    int* returnSize ;
+    returnSize = &size;/* here returnSize store's the address
+         *returnSize will change the value present on that addres*/
+    /*int* result=*/sortArrayByParity( nums, numsSize, returnSize);
+
+    for(int j=0;j<size;j++){
+        printf("%d",nums[j]);
+    }
+
+
 }
