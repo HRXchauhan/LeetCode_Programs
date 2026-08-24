@@ -1,14 +1,14 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
-    //int *arr;
+    int *arr;
     int temp=0;
-    //arr=malloc( numsSize * sizeof(int));
+    arr=malloc( numsSize * sizeof(int));
     int i=0, j=numsSize-1;
 
     *returnSize=numsSize;
 
-    /*for(int a=0;a<numsSize;a++){
+    for(int a=0;a<numsSize;a++){
         if(nums[a]%2==0){
             arr[i]=nums[a];
             i++;
@@ -17,9 +17,12 @@ int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
             arr[j]=nums[a];
             j--;
         }
-    }*/
 
-    while(j>i){
+    }
+    return arr;
+        
+
+    /*while(j>i){
         if(nums[i]%2==0){
             i++;
         }
@@ -36,7 +39,7 @@ int* sortArrayByParity(int* nums, int numsSize, int* returnSize) {
             j--;
         }
     }
-    return nums;
+    return nums;*/
     
 }
 
@@ -56,11 +59,14 @@ int main(){
     int* returnSize ;
     returnSize = &size;/* here returnSize store's the address
          *returnSize will change the value present on that addres*/
-    /*int* result=*/sortArrayByParity( nums, numsSize, returnSize);
+    int* arr = sortArrayByParity( nums, numsSize, returnSize);
 
     for(int j=0;j<size;j++){
-        printf("%d",nums[j]);
+        //printf("%d",nums[j]);
+        printf("%d",arr[j]);
+        //free(arr[j]); i olny free the variable which is malloced ( arr=malloc( numsSize * sizeof(int));)
     }
+    free(arr);
 
 
 }
