@@ -20,3 +20,28 @@ int* getConcatenation(int* nums, int numsSize, int* returnSize) {
     return ans;
     
 }
+int main(){
+    int numsSize;
+    printf("Enter the size of nums:\n");
+    scanf("%d",&numsSize);
+
+    int nums[numsSize];
+
+    printf("Enter the nums array:\n");
+
+    for(int i=0;i<numsSize;i++){
+        scanf("%d",&nums[i]);
+    }
+    int *returnSize;
+    int size;
+    returnSize = &size;
+
+    int *ans=getConcatenation(nums, numsSize, returnSize);
+
+    printf("The concatenated array is :\n");
+
+    for(int j=0;j<size;j++){
+        printf("%d",ans[j]);
+    }
+    
+}
