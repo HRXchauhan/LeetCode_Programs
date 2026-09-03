@@ -1,3 +1,6 @@
+ #include <stdio.h>
+ #include <math.h>
+
 int xorOperation(int n, int start) {
     int arr[n];
     int sum=0;
@@ -9,4 +12,15 @@ int xorOperation(int n, int start) {
     }
     return sum;
     
+}
+
+int main(){
+    int n,start;
+
+    printf("Enter the value of n and start respectivly:\n");
+    scanf("%d %d",&n, &start);
+
+    int xor=xorOperation(n, start);
+
+    printf("The result is:-> %d",xor);
 }
