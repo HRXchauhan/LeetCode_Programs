@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
 int numJewelsInStones(char* jewels, char* stones) {
     //int len = strlen(jewels);
     int hash[256]={0};
@@ -12,4 +17,23 @@ int numJewelsInStones(char* jewels, char* stones) {
         }
     }
     return count;
+}
+
+int main(){
+    int jewelslen, stoneslen;
+    printf("Enter the lentgth of jewels and stone:\n");
+    scanf("%d %d",&jewelslen, &stoneslen);
+    char jewels[jewelslen+1], stones[stoneslen+1];
+
+    printf("Enter the string;\n");
+    scanf("%s",&jewels);
+    printf("Enter the string stones;\n");
+    scanf("%s",&stones);
+
+    int result = numJewelsInStones(jewels,stones);
+
+    printf("The result is:->%d",result);
+    
+    return 0;
+
 }
