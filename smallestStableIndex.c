@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int firstStableIndex(int* nums, int numsSize, int k) {
+/*int firstStableIndex(int* nums, int numsSize, int k) {
     int max = nums[0];
     int min =nums[0],in=0;
     int minmum(int in,int* nums, int numsSize);
@@ -36,6 +36,39 @@ int minmum(int in,int* nums, int numsSize){
         }
     }
         return min;
+}
+*/
+int firstStableIndex(int* nums, int numsSize, int k) {
+    int prefmax[numsSize];
+    int suffmin[numsSize];
+    prefmax[0]=nums[0];
+    suffmin[numsSize-1]=nums[numsSize-1];
+    for(int m=1;m<numsSize;m++){
+        if(prefmax[m-1]<nums[m]){
+            prefmax[m]=nums[m];
+        }
+        else{
+            prefmax[m]=prefmax[m-1];
+        }
+    }
+    for(int n=numsSize-2;n>=0;n--){
+        if(suffmin[n+1]>nums[n]){
+            suffmin[n]=nums[n];       
+        }
+        else{
+            suffmin[n]=suffmin[n+1];
+        }
+    }
+    
+    for(int i=0;i<numsSize;i++){
+        if(prefmax[i]-suffmin[i]<=k){
+            return i;
+
+        }
+    }
+
+    return -1;
+    
 }
 
 int main(){
