@@ -1,3 +1,7 @@
+#include <stdbool.h>
+#include <stdio.h>
+
+
 bool checkDivisibility(int n) {
     int sum=0, pro=1, temp=n;
     while(temp!=0){
@@ -13,4 +17,17 @@ bool checkDivisibility(int n) {
     return false;
 
     
+}
+
+int main (){
+    int n;
+
+    printf("Enter the number to check:\n");
+    scanf("%d",&n);
+
+    bool ans= checkDivisibility(n);
+
+    printf("The result is: %",ans);
+
+    return 0;
 }
