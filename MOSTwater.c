@@ -27,3 +27,7 @@ int maxArea(int* height, int heightSize) {
 
     return max;
 }
+
+int main (){
+    int heightSize;
+}
