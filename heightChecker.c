@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 int heightChecker(int* heights, int heightsSize) {
     int expected[heightsSize];
     int temp=0,count=0;
@@ -28,4 +28,20 @@ int heightChecker(int* heights, int heightsSize) {
         }
     }
     return count;
+}
+
+int main(){
+    int heightsSize;
+    printf("Enter the size of the height array:\n");
+    scanf("%d",&heightsSize);
+    int heights[heightsSize];
+    printf("Enter the height array:\n");
+    for(int n=0;n<heightsSize;n++){
+        scanf("%d",&heights[n]);
+    }
+
+    int result=heightChecker(heights, heightsSize);
+    printf("The result is :%d",result);
+
+    return 0;
 }
