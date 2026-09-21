@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int mySqrt(int x) {
     int low = 0, high = x;
     int ans = 0;
@@ -14,4 +16,15 @@ int mySqrt(int x) {
     }
 
     return ans;//commit sorry
+}
+
+int main(){
+    int x;
+    printf("Enter the number to know sqr root:\n");
+    scanf("%d",&x);
+    int sqrt=mySqrt(x);
+
+    printf("The result is:-> %d",sqrt);
+
+    return 0;;
 }
