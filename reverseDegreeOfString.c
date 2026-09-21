@@ -5,8 +5,8 @@ int reverseDegree(char* s) {
 
 
     while(s[n]!='\0'){
-        x=s[n]-123;
-        x=x*-1;
+        x=123-s[n];
+       
         prd=x*(n+1);
         sum=sum+prd;
         n++;
